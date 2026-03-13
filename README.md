@@ -191,4 +191,4 @@ This project was built as an academic web development assignment. Feel free to u
 
 ---
 
-*Built with ❤️ using HTML, CSS, and vanilla JavaScript — no frameworks required.*
+*Built using HTML, CSS, and vanilla JavaScript — no frameworks required.*
