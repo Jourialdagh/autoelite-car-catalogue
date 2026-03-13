@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+  dealerships.html - Dealership Locator
+  API #2: Uses OpenStreetMap / Leaflet for map + REST Countries for country selector
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find AutoElite dealership locations across the Greater Toronto Area. Book test drives today.">
+  <meta name="keywords" content="AutoElite dealerships, car dealership Toronto, test drive booking, dealership locations">
+  <meta name="author" content="AutoElite">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link id="theme-link" rel="stylesheet" href="css/theme1.css">
+  <!-- Leaflet CSS for interactive maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <title>Dealerships - AutoElite</title>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">Auto<span>Elite</span></a>
+    <nav><ul id="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalogue.html">Catalogue</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="compare.html">Compare</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="wiki/index.html">Help</a></li>
+    </ul></nav>
+    <div class="theme-switcher">
+      <button class="theme-btn t1" data-theme="1"></button>
+      <button class="theme-btn t2" data-theme="2"></button>
+      <button class="theme-btn t3" data-theme="3"></button>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div style="background:var(--bg-card);border-bottom:1px solid var(--border);padding:30px 20px;">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Dealerships</div>
+    <h1 style="font-family:var(--font-heading);color:var(--primary);font-size:2rem;">Our Dealerships</h1>
+    <p style="color:var(--text-muted);">5 locations across the Greater Toronto Area</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:350px 1fr;gap:30px;align-items:start;">
+
+      <!-- DEALERSHIP LIST -->
+      <div>
+        <h2 style="font-family:var(--font-heading);color:var(--primary);margin-bottom:20px;">Locations</h2>
+
+        <div id="dealership-cards">
+          <div class="about-card" style="cursor:pointer;margin-bottom:15px;" onclick="focusMap(43.655,-79.380,'AutoElite Downtown')">
+            <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:8px;">📍 Downtown Toronto</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;">123 King St W, Toronto, ON M5V 1K2</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">📞 416-555-0101</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">🕐 Mon–Fri 9AM–8PM</p>
+          </div>
+          <div class="about-card" style="cursor:pointer;margin-bottom:15px;" onclick="focusMap(43.767,-79.412,'AutoElite North York')">
+            <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:8px;">📍 North York</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;">4550 Yonge St, North York, ON M2N 6K7</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">📞 416-555-0202</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">🕐 Mon–Fri 9AM–8PM</p>
+          </div>
+          <div class="about-card" style="cursor:pointer;margin-bottom:15px;" onclick="focusMap(43.773,-79.257,'AutoElite Scarborough')">
+            <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:8px;">📍 Scarborough</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;">1900 Eglinton Ave E, Scarborough, ON M1L 2M4</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">📞 416-555-0303</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">🕐 Mon–Fri 9AM–8PM</p>
+          </div>
+          <div class="about-card" style="cursor:pointer;margin-bottom:15px;" onclick="focusMap(43.589,-79.644,'AutoElite Mississauga')">
+            <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:8px;">📍 Mississauga</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;">3024 Hurontario St, Mississauga, ON L5B 4L9</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">📞 905-555-0404</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">🕐 Mon–Sat 9AM–7PM</p>
+          </div>
+          <div class="about-card" style="cursor:pointer;margin-bottom:20px;" onclick="focusMap(43.732,-79.760,'AutoElite Brampton')">
+            <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:8px;">📍 Brampton</h3>
+            <p style="color:var(--text-muted);font-size:0.85rem;">2 County Court Blvd, Brampton, ON L6W 3W8</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">📞 905-555-0505</p>
+            <p style="color:var(--text-muted);font-size:0.85rem;">🕐 Mon–Sat 10AM–6PM</p>
+          </div>
+        </div>
+
+        <!-- Countries API Form -->
+        <div class="form-section" style="padding:20px;">
+          <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:15px;">International Inquiries</h3>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:12px;">We ship to select countries. Choose yours:</p>
+          <select id="country-select" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:10px;border-radius:var(--radius);font-family:var(--font-body);">
+            <option value="">Loading countries...</option>
+          </select>
+          <button class="btn btn-outline mt-20" style="width:100%;" onclick="showToast('International inquiry submitted!')">Submit Inquiry</button>
+          <p style="color:var(--text-muted);font-size:0.75rem;margin-top:8px;">Country list loaded via REST Countries API</p>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div>
+        <h2 style="font-family:var(--font-heading);color:var(--primary);margin-bottom:20px;">Interactive Map</h2>
+        <div id="map" style="height:500px;"></div>
+        <p style="color:var(--text-muted);font-size:0.8rem;margin-top:8px;">Click any location marker for details. Map powered by OpenStreetMap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>AutoElite</h4><p style="color:var(--text-muted);font-size:0.9rem;">Premium car catalogue.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 AutoElite. All rights reserved.</p></div>
+</footer>
+
+<div id="toast" class="toast"></div>
+<!-- Leaflet JS for interactive maps -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/main.js"></script>
+<script>
+  let leafletMap;
+
+  function focusMap(lat, lng, name) {
+    if (leafletMap) {
+      leafletMap.setView([lat, lng], 14);
+      showToast(`Focused on ${name}`);
+    }
+  }
+
+  // Override initMap to save reference
+  window.addEventListener('load', () => {
+    if (typeof L !== 'undefined') {
+      leafletMap = L.map('map').setView([43.65, -79.38], 11);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+      }).addTo(leafletMap);
+
+      const dealerships = [
+        { name: 'AutoElite Downtown', lat: 43.655, lng: -79.380, phone: '416-555-0101' },
+        { name: 'AutoElite North York', lat: 43.767, lng: -79.412, phone: '416-555-0202' },
+        { name: 'AutoElite Scarborough', lat: 43.773, lng: -79.257, phone: '416-555-0303' },
+        { name: 'AutoElite Mississauga', lat: 43.589, lng: -79.644, phone: '905-555-0404' },
+        { name: 'AutoElite Brampton', lat: 43.732, lng: -79.760, phone: '905-555-0505' }
+      ];
+
+      const icon = L.divIcon({
+        className: '',
+        html: '<div style="background:#c9a84c;width:24px;height:24px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.5)"></div>',
+        iconSize: [24, 24], iconAnchor: [12, 12]
+      });
+
+      dealerships.forEach(d => {
+        L.marker([d.lat, d.lng], { icon })
+          .addTo(leafletMap)
+          .bindPopup(`<strong style="color:#333">${d.name}</strong><br>📞 ${d.phone}`);
+      });
+    }
+  });
+</script>
+</body>
+</html>

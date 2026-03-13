@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+  index.html - AutoElite Car Catalogue Homepage
+  Features: Hero section, featured cars, weather widget, newsletter
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AutoElite - Premium Car Catalogue. Browse 20+ luxury and performance vehicles.">
+  <meta name="keywords" content="cars, luxury cars, SUV, electric vehicles, BMW, Mercedes, Tesla, car catalogue">
+  <meta name="author" content="AutoElite">
+  <meta property="og:title" content="AutoElite - Premium Car Catalogue">
+  <meta property="og:description" content="Discover your perfect vehicle from our curated selection of premium cars.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link id="theme-link" rel="stylesheet" href="css/theme1.css">
+  <title>AutoElite - Premium Car Catalogue</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">Auto<span>Elite</span></a>
+    <nav>
+      <ul id="main-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="wiki/index.html">Help</a></li>
+      </ul>
+    </nav>
+    <div class="theme-switcher">
+      <button class="theme-btn t1" data-theme="1" title="Gold Theme"></button>
+      <button class="theme-btn t2" data-theme="2" title="Green Theme"></button>
+      <button class="theme-btn t3" data-theme="3" title="Red Theme"></button>
+    </div>
+    <button class="hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Find Your Perfect Drive</h1>
+    <p>Explore our curated catalogue of 20+ premium vehicles. From everyday commuters to exotic supercars — discover your dream car today.</p>
+    <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+      <a href="catalogue.html" class="btn btn-primary">Browse Catalogue</a>
+      <a href="quote.html" class="btn btn-outline">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div style="background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px;">
+  <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center;">
+    <div>
+      <div style="font-size:2rem;color:var(--primary);font-family:var(--font-heading);font-weight:700;">20+</div>
+      <div style="color:var(--text-muted);font-size:0.85rem;">Premium Vehicles</div>
+    </div>
+    <div>
+      <div style="font-size:2rem;color:var(--primary);font-family:var(--font-heading);font-weight:700;">12</div>
+      <div style="color:var(--text-muted);font-size:0.85rem;">Top Brands</div>
+    </div>
+    <div>
+      <div style="font-size:2rem;color:var(--primary);font-family:var(--font-heading);font-weight:700;">5</div>
+      <div style="color:var(--text-muted);font-size:0.85rem;">Dealership Locations</div>
+    </div>
+    <div>
+      <div style="font-size:2rem;color:var(--primary);font-family:var(--font-heading);font-weight:700;">100%</div>
+      <div style="color:var(--text-muted);font-size:0.85rem;">Satisfaction Guaranteed</div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED CARS SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Featured Vehicles</h2>
+    <p class="section-subtitle">Handpicked selections from our premium inventory</p>
+
+    <div class="product-grid" id="featured-grid">
+      <!-- Cards injected by JS from JSON -->
+    </div>
+
+    <div class="text-center mt-40">
+      <a href="catalogue.html" class="btn btn-outline">View All 20 Vehicles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES SECTION -->
+<section style="background:var(--bg-card);border-top:1px solid var(--border);">
+  <div class="container">
+    <h2 class="section-title">Shop by Category</h2>
+    <p class="section-subtitle">Find the perfect vehicle for your lifestyle</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:15px;">
+      <a href="catalogue.html?type=Sedan" class="cat-card" style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:25px 15px;text-align:center;text-decoration:none;transition:var(--transition);">
+        <div style="font-size:2.5rem;margin-bottom:10px;">🚗</div>
+        <div style="color:var(--text);font-weight:600;">Sedans</div>
+      </a>
+      <a href="catalogue.html?type=SUV" class="cat-card" style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:25px 15px;text-align:center;text-decoration:none;transition:var(--transition);">
+        <div style="font-size:2.5rem;margin-bottom:10px;">🚙</div>
+        <div style="color:var(--text);font-weight:600;">SUVs</div>
+      </a>
+      <a href="catalogue.html?type=Sports" class="cat-card" style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:25px 15px;text-align:center;text-decoration:none;transition:var(--transition);">
+        <div style="font-size:2.5rem;margin-bottom:10px;">🏎️</div>
+        <div style="color:var(--text);font-weight:600;">Sports Cars</div>
+      </a>
+      <a href="catalogue.html?type=Electric" class="cat-card" style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:25px 15px;text-align:center;text-decoration:none;transition:var(--transition);">
+        <div style="font-size:2.5rem;margin-bottom:10px;">⚡</div>
+        <div style="color:var(--text);font-weight:600;">Electric</div>
+      </a>
+      <a href="catalogue.html?type=Truck" class="cat-card" style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:25px 15px;text-align:center;text-decoration:none;transition:var(--transition);">
+        <div style="font-size:2.5rem;margin-bottom:10px;">🛻</div>
+        <div style="color:var(--text);font-weight:600;">Trucks</div>
+      </a>
+      <a href="catalogue.html?type=Convertible" class="cat-card" style="background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:25px 15px;text-align:center;text-decoration:none;transition:var(--transition);">
+        <div style="font-size:2.5rem;margin-bottom:10px;">🚘</div>
+        <div style="color:var(--text);font-weight:600;">Convertibles</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WEATHER WIDGET -->
+<section>
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;">
+    <div>
+      <h2 class="section-title" style="text-align:left;">Plan Your Test Drive</h2>
+      <p style="color:var(--text-muted);margin-bottom:20px;">Check the weather before heading to our dealership. Test drives are best enjoyed in good conditions!</p>
+      <div style="display:flex;gap:10px;margin-bottom:20px;">
+        <input type="text" id="city-input" placeholder="Enter your city..." style="flex:1;background:var(--bg-card);border:1px solid var(--border);color:var(--text);padding:10px 16px;border-radius:var(--radius);font-family:var(--font-body);">
+        <button id="city-search-btn" class="btn btn-primary">Check</button>
+      </div>
+      <div id="weather-widget"></div>
+    </div>
+    <div>
+      <h2 class="section-title" style="text-align:left;">Stay Updated</h2>
+      <p style="color:var(--text-muted);margin-bottom:20px;">Subscribe to our newsletter for exclusive deals, new arrivals, and automotive news.</p>
+      <form id="newsletter-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required style="width:100%;background:var(--bg-card);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:var(--radius);font-family:var(--font-body);margin-bottom:10px;">
+        </div>
+        <div class="form-group">
+          <input type="email" id="newsletter-email" placeholder="Your Email Address" required style="width:100%;background:var(--bg-card);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:var(--radius);font-family:var(--font-body);">
+        </div>
+        <button type="submit" class="btn btn-primary mt-20" style="width:100%;">Subscribe to Newsletter</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>AutoElite</h4>
+      <p style="color:var(--text-muted);font-size:0.9rem;">Premium car catalogue offering the finest selection of luxury and performance vehicles.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+        <li><a href="compare.html">Compare Cars</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="catalogue.html?type=Sedan">Sedans</a></li>
+        <li><a href="catalogue.html?type=SUV">SUVs</a></li>
+        <li><a href="catalogue.html?type=Electric">Electric Cars</a></li>
+        <li><a href="catalogue.html?type=Sports">Sports Cars</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="wiki/index.html">Help Wiki</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="dealerships.html">Dealerships</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 AutoElite Car Catalogue. All rights reserved. | <a href="wiki/index.html" style="color:var(--primary)">Help Wiki</a></p>
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<!-- MAIN JS -->
+<script src="js/main.js"></script>
+<script>
+  /* Load featured cars from JSON and render cards */
+  async function loadFeatured() {
+    try {
+      const res = await fetch('json/cars.json');
+      const data = await res.json();
+      const featured = data.cars.filter(c => c.isNew).slice(0, 6); // Show 6 new arrivals
+      const grid = document.getElementById('featured-grid');
+      if (!grid) return;
+
+      grid.innerHTML = featured.map(car => `
+        <div class="product-card"
+             data-name="${car.brand} ${car.model}"
+             data-brand="${car.brand.toLowerCase()}"
+             data-type="${car.type.toLowerCase()}"
+             data-price="${car.basePrice}">
+          <div class="card-img" style="font-size:5rem">${car.emoji}</div>
+          <div class="card-body">
+            <div class="card-brand">${car.brand}</div>
+            <div class="card-title">${car.model} <small style="color:var(--text-muted)">${car.year}</small></div>
+            <div class="card-price">From $${car.basePrice.toLocaleString()}</div>
+            <div class="card-tags">
+              ${car.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+              ${car.isNew ? '<span class="badge badge-new">NEW</span>' : ''}
+              ${car.isSale ? '<span class="badge badge-sale">SALE</span>' : ''}
+            </div>
+            <div style="display:flex;gap:8px;">
+              <a href="product-${car.id}.html" class="btn btn-outline" style="flex:1;text-align:center;padding:8px;">View Details</a>
+              <button onclick="toggleWishlist('${car.id}','${car.brand} ${car.model}')"
+                      data-wish="${car.id}"
+                      style="background:var(--bg);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:var(--radius);cursor:pointer;font-size:1.1rem;">🤍</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Refresh wishlist states after rendering
+      const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+      document.querySelectorAll('[data-wish]').forEach(btn => {
+        btn.textContent = wishlist.includes(btn.dataset.wish) ? '❤️' : '🤍';
+      });
+    } catch(e) {
+      console.warn('Could not load featured cars:', e);
+    }
+  }
+
+  // Category card hover effects
+  document.querySelectorAll('.cat-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.borderColor = 'var(--primary)';
+      card.style.transform = 'translateY(-4px)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.borderColor = 'var(--border)';
+      card.style.transform = '';
+    });
+  });
+
+  loadFeatured();
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--
+  contact.html - Contact Page
+  HTML Form #2: Contact / inquiry form with validation
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AutoElite's team for inquiries, test drives, or sales support.">
+  <meta name="keywords" content="contact AutoElite, car dealership contact, test drive booking, sales inquiry">
+  <meta name="author" content="AutoElite">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link id="theme-link" rel="stylesheet" href="css/theme1.css">
+  <title>Contact Us - AutoElite</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">Auto<span>Elite</span></a>
+    <nav>
+      <ul id="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="wiki/index.html">Help</a></li>
+      </ul>
+    </nav>
+    <div class="theme-switcher">
+      <button class="theme-btn t1" data-theme="1"></button>
+      <button class="theme-btn t2" data-theme="2"></button>
+      <button class="theme-btn t3" data-theme="3"></button>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--bg-card);border-bottom:1px solid var(--border);padding:30px 20px;">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact Us</div>
+    <h1 style="font-family:var(--font-heading);color:var(--primary);font-size:2rem;">Get In Touch</h1>
+    <p style="color:var(--text-muted);">Our team is ready to help with any questions</p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 350px;gap:30px;align-items:start;">
+
+      <!-- CONTACT FORM -->
+      <div class="form-section">
+        <h2 style="font-family:var(--font-heading);color:var(--primary);margin-bottom:25px;">Send Us a Message</h2>
+
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Full Name *</label>
+              <input type="text" id="c-name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email Address *</label>
+              <input type="email" id="c-email" placeholder="john@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-phone">Phone Number</label>
+              <input type="tel" id="c-phone" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="c-subject">Subject *</label>
+              <select id="c-subject" required>
+                <option value="">Select a Subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="testdrive">Book a Test Drive</option>
+                <option value="quote">Request a Custom Quote</option>
+                <option value="trade">Trade-In Valuation</option>
+                <option value="financing">Financing Questions</option>
+                <option value="service">Service & Maintenance</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-vehicle">Vehicle of Interest</label>
+            <select id="c-vehicle">
+              <option value="">-- Not sure yet --</option>
+              <option value="bmw-3">BMW 3 Series</option>
+              <option value="mercedes-c">Mercedes-Benz C-Class</option>
+              <option value="audi-a4">Audi A4</option>
+              <option value="toyota-rav4">Toyota RAV4</option>
+              <option value="tesla-3">Tesla Model 3</option>
+              <option value="ford-mustang">Ford Mustang GT</option>
+              <option value="honda-civic">Honda Civic</option>
+              <option value="jeep-wrangler">Jeep Wrangler</option>
+              <option value="porsche-911">Porsche 911</option>
+              <option value="other">Other (mention in message)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="c-preferred">Preferred Contact Method</label>
+            <div style="display:flex;gap:20px;padding:10px 0;">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text-muted);">
+                <input type="radio" name="contact-method" value="email" checked style="accent-color:var(--primary)"> Email
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text-muted);">
+                <input type="radio" name="contact-method" value="phone" style="accent-color:var(--primary)"> Phone
+              </label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text-muted);">
+                <input type="radio" name="contact-method" value="either" style="accent-color:var(--primary)"> Either
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-message">Message *</label>
+            <textarea id="c-message" placeholder="Tell us how we can help you..." required style="min-height:140px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;color:var(--text-muted);font-size:0.9rem;">
+              <input type="checkbox" required style="accent-color:var(--primary);margin-top:3px;">
+              I agree to be contacted by AutoElite regarding my inquiry. I understand my information will not be shared with third parties.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;font-size:1rem;">
+            📤 Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO SIDEBAR -->
+      <div>
+        <div class="about-card mb-20">
+          <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:15px;">📍 Head Office</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.8;">
+            123 AutoElite Boulevard<br>
+            Toronto, ON M5V 2T6<br>
+            Canada
+          </p>
+        </div>
+        <div class="about-card mb-20">
+          <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:15px;">📞 Call Us</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;line-height:2;">
+            Sales: <a href="tel:+14165550100" style="color:var(--primary);">416-555-0100</a><br>
+            Service: <a href="tel:+14165550101" style="color:var(--primary);">416-555-0101</a><br>
+            Toll-Free: <a href="tel:+18005550100" style="color:var(--primary);">1-800-555-0100</a>
+          </p>
+        </div>
+        <div class="about-card mb-20">
+          <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:15px;">⏰ Business Hours</h3>
+          <table style="width:100%;font-size:0.85rem;">
+            <tr><td style="color:var(--text-muted);padding:4px 0;">Mon – Fri</td><td style="color:var(--text);">9AM – 8PM</td></tr>
+            <tr><td style="color:var(--text-muted);padding:4px 0;">Saturday</td><td style="color:var(--text);">10AM – 6PM</td></tr>
+            <tr><td style="color:var(--text-muted);padding:4px 0;">Sunday</td><td style="color:var(--text);">11AM – 5PM</td></tr>
+          </table>
+        </div>
+        <div class="about-card">
+          <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:15px;">📧 Email</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;">
+            <a href="mailto:sales@autoelite.ca" style="color:var(--primary);">sales@autoelite.ca</a><br>
+            <a href="mailto:service@autoelite.ca" style="color:var(--primary);">service@autoelite.ca</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>AutoElite</h4><p style="color:var(--text-muted);font-size:0.9rem;">Premium car catalogue.</p></div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul><li><a href="index.html">Home</a></li><li><a href="catalogue.html">Catalogue</a></li><li><a href="dealerships.html">Dealerships</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 AutoElite. All rights reserved.</p></div>
+</footer>
+
+<div id="toast" class="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,547 @@
+{
+  "catalogue": "AutoElite Car Catalogue",
+  "version": "1.0",
+  "updated": "2024-01-15",
+  "cars": [
+    {
+      "id": "car-001",
+      "brand": "BMW",
+      "model": "3 Series",
+      "year": 2024,
+      "type": "Sedan",
+      "basePrice": 45000,
+      "emoji": "🚗",
+      "description": "The BMW 3 Series is the benchmark sports sedan, blending performance, luxury, and technology in perfect harmony.",
+      "options": {
+        "engine": ["2.0L TwinPower Turbo", "3.0L Inline-6 TwinPower", "Plug-in Hybrid"],
+        "transmission": ["8-Speed Automatic", "6-Speed Manual"],
+        "color": ["Alpine White", "Mineral Grey", "Black Sapphire", "Portimao Blue", "Melbourne Red"],
+        "interior": ["Dakota Leather Black", "Cognac Leather", "Sensatec Perforated"],
+        "trim": ["Sport", "M Sport", "Luxury", "xDrive AWD"]
+      },
+      "specs": {
+        "horsepower": "255–382 hp",
+        "acceleration": "5.1–5.8s 0–100",
+        "topSpeed": "250 km/h (limited)",
+        "fuelEconomy": "7.8L/100km"
+      },
+      "features": ["Apple CarPlay", "Android Auto", "Heated Seats", "Parking Sensors", "Lane Assist"],
+      "tags": ["Sport", "Luxury", "Sedan"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-002",
+      "brand": "Mercedes-Benz",
+      "model": "C-Class",
+      "year": 2024,
+      "type": "Sedan",
+      "basePrice": 48000,
+      "emoji": "🚘",
+      "description": "The Mercedes-Benz C-Class sets the standard for refined luxury and cutting-edge technology.",
+      "options": {
+        "engine": ["1.5L EQ Boost", "2.0L Turbo", "3.0L Inline-6 MHEV", "AMG 4.0L V8"],
+        "transmission": ["9G-Tronic Automatic"],
+        "color": ["Polar White", "Obsidian Black", "Selenite Grey", "Spectral Blue", "High-tech Silver"],
+        "interior": ["Black MB-Tex", "Macchiato Beige", "Neva Grey", "Sienna Brown Leather"],
+        "trim": ["Standard", "AMG Line", "Exclusive", "Night Package"]
+      },
+      "specs": {
+        "horsepower": "204–503 hp",
+        "acceleration": "4.0–7.2s 0–100",
+        "topSpeed": "250 km/h (limited)",
+        "fuelEconomy": "8.2L/100km"
+      },
+      "features": ["MBUX System", "Ambient Lighting", "Wireless Charging", "Burmester Sound", "360° Camera"],
+      "tags": ["Luxury", "Sedan", "Premium"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-003",
+      "brand": "Audi",
+      "model": "A4",
+      "year": 2024,
+      "type": "Sedan",
+      "basePrice": 44000,
+      "emoji": "🚙",
+      "description": "The Audi A4 combines sophisticated engineering with a refined interior and progressive technology.",
+      "options": {
+        "engine": ["2.0 TFSI 150hp", "2.0 TFSI 204hp", "40 TFSI Quattro", "45 TFSI Quattro"],
+        "transmission": ["7-Speed S tronic", "6-Speed Manual"],
+        "color": ["Glacier White", "Mythos Black", "Daytona Grey", "District Green", "Floret Silver"],
+        "interior": ["Rock Grey", "Atlas Beige", "Rotor Grey", "Cognac Brown"],
+        "trim": ["Komfort", "Progressiv", "Technik", "Black Edition"]
+      },
+      "specs": {
+        "horsepower": "150–261 hp",
+        "acceleration": "5.7–8.5s 0–100",
+        "topSpeed": "230 km/h",
+        "fuelEconomy": "7.4L/100km"
+      },
+      "features": ["Virtual Cockpit", "MMI Navigation", "Quattro AWD", "Audi Sound System", "Adaptive Cruise"],
+      "tags": ["Luxury", "Sedan", "AWD"],
+      "isNew": false,
+      "isSale": true
+    },
+    {
+      "id": "car-004",
+      "brand": "Toyota",
+      "model": "RAV4",
+      "year": 2024,
+      "type": "SUV",
+      "basePrice": 33000,
+      "emoji": "🚐",
+      "description": "America's best-selling SUV, the Toyota RAV4 offers versatility, reliability, and efficiency.",
+      "options": {
+        "engine": ["2.5L 4-Cylinder", "2.5L Hybrid", "2.5L Plug-in Hybrid", "2.4L Turbo"],
+        "transmission": ["8-Speed Automatic", "CVT (Hybrid)"],
+        "color": ["Super White", "Midnight Black", "Blueprint", "Magnetic Grey", "Cavalry Blue", "Ruby Flare Pearl"],
+        "interior": ["Black Fabric", "Light Gray SofTex", "Black SofTex"],
+        "trim": ["LE", "XLE", "XLE Premium", "Adventure", "TRD Off-Road", "Limited"]
+      },
+      "specs": {
+        "horsepower": "203–302 hp",
+        "acceleration": "7.4–8.6s 0–100",
+        "topSpeed": "195 km/h",
+        "fuelEconomy": "6.2L/100km"
+      },
+      "features": ["Toyota Safety Sense", "Apple CarPlay", "Android Auto", "All-Wheel Drive", "Smart Key"],
+      "tags": ["SUV", "Hybrid", "Family"],
+      "isNew": false,
+      "isSale": false
+    },
+    {
+      "id": "car-005",
+      "brand": "Tesla",
+      "model": "Model 3",
+      "year": 2024,
+      "type": "Electric",
+      "basePrice": 52000,
+      "emoji": "⚡",
+      "description": "The Tesla Model 3 is the world's best-selling electric vehicle, offering long range and rapid acceleration.",
+      "options": {
+        "engine": ["Standard Range RWD", "Long Range AWD", "Performance AWD"],
+        "transmission": ["Single-Speed (Electric)"],
+        "color": ["Pearl White Multi-Coat", "Midnight Silver Metallic", "Deep Blue Metallic", "Red Multi-Coat", "Solid Black"],
+        "interior": ["All Black", "Black and White"],
+        "trim": ["Standard", "Long Range", "Performance"]
+      },
+      "specs": {
+        "horsepower": "283–450 hp",
+        "acceleration": "3.1–5.8s 0–100",
+        "topSpeed": "225–261 km/h",
+        "range": "513–614 km"
+      },
+      "features": ["Autopilot", "15\" Touchscreen", "Over-the-Air Updates", "Supercharger Access", "Glass Roof"],
+      "tags": ["Electric", "Sedan", "EV"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-006",
+      "brand": "Ford",
+      "model": "Mustang GT",
+      "year": 2024,
+      "type": "Coupe",
+      "basePrice": 42000,
+      "emoji": "🏎️",
+      "description": "America's iconic pony car, the Ford Mustang GT delivers raw power and thrilling performance.",
+      "options": {
+        "engine": ["2.3L EcoBoost", "5.0L V8 Ti-VCT", "Shelby GT500 5.2L Supercharged"],
+        "transmission": ["6-Speed Manual", "10-Speed Automatic"],
+        "color": ["Race Red", "Oxford White", "Shadow Black", "Iconic Silver", "Grabber Blue", "Dark Matter Grey"],
+        "interior": ["Black ActiveX", "Ceramic ActiveX", "Ebony Leather"],
+        "trim": ["EcoBoost", "GT", "GT Premium", "Mach 1", "Shelby GT500"]
+      },
+      "specs": {
+        "horsepower": "315–760 hp",
+        "acceleration": "3.8–5.1s 0–100",
+        "topSpeed": "260–290 km/h",
+        "fuelEconomy": "11.2L/100km"
+      },
+      "features": ["B&O Sound System", "Digital Instrument Cluster", "Track Apps", "Brembo Brakes", "MagneRide Suspension"],
+      "tags": ["Sports", "Coupe", "V8"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-007",
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2024,
+      "type": "Sedan",
+      "basePrice": 28000,
+      "emoji": "🚗",
+      "description": "The Honda Civic remains one of the most beloved compact cars, blending practicality with sporty character.",
+      "options": {
+        "engine": ["2.0L DOHC i-VTEC", "1.5L Turbocharged DOHC", "Type R 2.0L VTEC Turbo"],
+        "transmission": ["CVT Automatic", "6-Speed Manual"],
+        "color": ["Sonic Grey Pearl", "Rallye Red", "Platinum White Pearl", "Aegean Blue Metallic", "Crystal Black Pearl"],
+        "interior": ["Black Fabric", "Black/Grey Leather", "Red Leather (Type R)"],
+        "trim": ["LX", "Sport", "EX", "EX-L", "Touring", "Type R"]
+      },
+      "specs": {
+        "horsepower": "158–315 hp",
+        "acceleration": "5.4–8.2s 0–100",
+        "topSpeed": "240–272 km/h",
+        "fuelEconomy": "6.8L/100km"
+      },
+      "features": ["Honda Sensing Suite", "8\" Touchscreen", "Wireless CarPlay", "Adaptive Cruise", "Lane Keeping Assist"],
+      "tags": ["Compact", "Sedan", "Sporty"],
+      "isNew": false,
+      "isSale": true
+    },
+    {
+      "id": "car-008",
+      "brand": "Jeep",
+      "model": "Wrangler",
+      "year": 2024,
+      "type": "SUV",
+      "basePrice": 38000,
+      "emoji": "🚙",
+      "description": "The legendary Jeep Wrangler is the ultimate off-road SUV, built for adventure and the great outdoors.",
+      "options": {
+        "engine": ["2.0L Turbo", "3.6L Pentastar V6", "3.0L EcoDiesel V6", "4xe Plug-in Hybrid"],
+        "transmission": ["8-Speed Automatic", "6-Speed Manual"],
+        "color": ["Bright White", "Black", "Firecracker Red", "Hydro Blue", "Sarge Green", "Snazzberry Pearl"],
+        "interior": ["Black Cloth", "Black Leather", "Heritage Tan Leather"],
+        "trim": ["Sport", "Sport S", "Sahara", "Rubicon", "4xe", "Rubicon 392"]
+      },
+      "specs": {
+        "horsepower": "270–470 hp",
+        "acceleration": "6.0–7.5s 0–100",
+        "topSpeed": "177–209 km/h",
+        "fuelEconomy": "12.4L/100km"
+      },
+      "features": ["4x4 System", "Removable Doors", "Fold-Down Windshield", "Rock-Trac", "Trail Rated Badge"],
+      "tags": ["SUV", "Off-Road", "4x4"],
+      "isNew": false,
+      "isSale": false
+    },
+    {
+      "id": "car-009",
+      "brand": "Porsche",
+      "model": "911",
+      "year": 2024,
+      "type": "Sports",
+      "basePrice": 115000,
+      "emoji": "🏎️",
+      "description": "The Porsche 911 is the world's most iconic sports car — timeless design meets extraordinary engineering.",
+      "options": {
+        "engine": ["3.0L Flat-6 Carrera", "3.0L Flat-6 S", "3.8L Flat-6 Turbo", "3.8L Flat-6 Turbo S"],
+        "transmission": ["7-Speed Manual", "8-Speed PDK"],
+        "color": ["Guards Red", "Racing Yellow", "Miami Blue", "GT Silver", "Jet Black", "Crayon"],
+        "interior": ["Black Leather", "Bordeaux Red", "Sea Blue", "Chalk Leather"],
+        "trim": ["Carrera", "Carrera S", "Carrera 4", "Targa 4S", "GT3", "Turbo S"]
+      },
+      "specs": {
+        "horsepower": "379–640 hp",
+        "acceleration": "2.7–4.0s 0–100",
+        "topSpeed": "296–330 km/h",
+        "fuelEconomy": "10.2L/100km"
+      },
+      "features": ["PASM Suspension", "PDCC", "Sport Chrono", "Bose Surround Sound", "Night Vision Assist"],
+      "tags": ["Sports", "Luxury", "Premium"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-010",
+      "brand": "Hyundai",
+      "model": "Tucson",
+      "year": 2024,
+      "type": "SUV",
+      "basePrice": 31000,
+      "emoji": "🚐",
+      "description": "The redesigned Hyundai Tucson features bold styling and a range of efficient powertrain options.",
+      "options": {
+        "engine": ["2.5L GDI", "1.6T Hybrid", "1.6T Plug-in Hybrid"],
+        "transmission": ["8-Speed Automatic", "6-Speed Automatic"],
+        "color": ["Amazon Gray", "White Cream", "Phantom Black", "Aqua Teal", "Shimmering Silver", "Calypso Red"],
+        "interior": ["Black Cloth", "Black/Grey Leather", "Beige Leather"],
+        "trim": ["Essential", "Preferred", "N Line", "Ultimate", "PHEV Ultimate"]
+      },
+      "specs": {
+        "horsepower": "187–261 hp",
+        "acceleration": "7.0–8.5s 0–100",
+        "topSpeed": "190 km/h",
+        "fuelEconomy": "7.6L/100km"
+      },
+      "features": ["10.25\" Touchscreen", "Wireless Charging", "Bose Sound", "Smart Cruise", "Blind-Spot Monitor"],
+      "tags": ["SUV", "Hybrid", "Family"],
+      "isNew": false,
+      "isSale": true
+    },
+    {
+      "id": "car-011",
+      "brand": "Volkswagen",
+      "model": "Golf GTI",
+      "year": 2024,
+      "type": "Hatchback",
+      "basePrice": 36000,
+      "emoji": "🚗",
+      "description": "The original hot hatch — the VW Golf GTI delivers everyday usability with weekend excitement.",
+      "options": {
+        "engine": ["2.0L TSI 241hp", "2.0L TSI 300hp (R)"],
+        "transmission": ["6-Speed Manual", "7-Speed DSG"],
+        "color": ["Pure White", "Deep Black Pearl", "Tornado Red", "Indium Grey", "Kings Red"],
+        "interior": ["Black/Red Tartan Cloth", "Black Leather", "Vienna Leather"],
+        "trim": ["Rabbit", "GTI", "GTI Autobahn", "Golf R"]
+      },
+      "specs": {
+        "horsepower": "241–315 hp",
+        "acceleration": "4.9–5.8s 0–100",
+        "topSpeed": "250 km/h (limited)",
+        "fuelEconomy": "7.9L/100km"
+      },
+      "features": ["Digital Cockpit Pro", "IQ.DRIVE", "Harman Kardon Sound", "DCC Adaptive Chassis", "Vehicle Dynamics Manager"],
+      "tags": ["Hatchback", "Sports", "Hot Hatch"],
+      "isNew": false,
+      "isSale": false
+    },
+    {
+      "id": "car-012",
+      "brand": "Chevrolet",
+      "model": "Corvette",
+      "year": 2024,
+      "type": "Sports",
+      "basePrice": 72000,
+      "emoji": "🏎️",
+      "description": "America's sports car — the mid-engine C8 Corvette is a supercar for the masses.",
+      "options": {
+        "engine": ["6.2L LT2 V8", "5.5L LT6 V8 (Z06)", "6.2L LT1 Supercharged (ZR1)"],
+        "transmission": ["8-Speed Dual-Clutch"],
+        "color": ["Arctic White", "Torch Red", "Elkhart Lake Blue", "Carbon Flash Black", "Amplify Orange Tintcoat"],
+        "interior": ["Jet Black", "Sky Cool Grey", "Morello Red", "Natural", "Strike"],
+        "trim": ["Stingray", "Z06", "ZR1", "E-Ray Hybrid"]
+      },
+      "specs": {
+        "horsepower": "495–1064 hp",
+        "acceleration": "2.6–3.9s 0–100",
+        "topSpeed": "312–346 km/h",
+        "fuelEconomy": "11.7L/100km"
+      },
+      "features": ["HUD", "Performance Data Recorder", "Brembo Brakes", "Magnetic Ride 4.0", "GT2 Seats"],
+      "tags": ["Sports", "V8", "American"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-013",
+      "brand": "Subaru",
+      "model": "Outback",
+      "year": 2024,
+      "type": "SUV",
+      "basePrice": 34000,
+      "emoji": "🚙",
+      "description": "The Subaru Outback is the adventure-ready SUV with standard AWD and impressive ground clearance.",
+      "options": {
+        "engine": ["2.5L Boxer 4-Cylinder", "2.4L Turbocharged Boxer"],
+        "transmission": ["Lineartronic CVT"],
+        "color": ["Crystal White Pearl", "Magnetite Grey", "Wilderness Green", "Autumn Green Pearl", "Sapphire Blue Pearl"],
+        "interior": ["Black StarTex", "Slate Blue Leather", "Java Brown Leather"],
+        "trim": ["Base", "Premium", "Limited", "Touring", "Wilderness", "XT Onyx Edition"]
+      },
+      "specs": {
+        "horsepower": "182–260 hp",
+        "acceleration": "6.1–7.4s 0–100",
+        "topSpeed": "196 km/h",
+        "fuelEconomy": "8.0L/100km"
+      },
+      "features": ["EyeSight Driver Assist", "X-MODE", "Symmetrical AWD", "StarLink Navigation", "Roof Rails"],
+      "tags": ["SUV", "AWD", "Adventure"],
+      "isNew": false,
+      "isSale": false
+    },
+    {
+      "id": "car-014",
+      "brand": "Lamborghini",
+      "model": "Huracán",
+      "year": 2024,
+      "type": "Sports",
+      "basePrice": 275000,
+      "emoji": "🏎️",
+      "description": "The Lamborghini Huracán is a visceral supercar experience with a screaming naturally-aspirated V10.",
+      "options": {
+        "engine": ["5.2L V10 LP 610-4", "5.2L V10 STO", "Huracán Sterrato"],
+        "transmission": ["7-Speed LDF Dual-Clutch"],
+        "color": ["Giallo Belenus", "Verde Mantis", "Arancio Borealis", "Bianco Monocerus", "Blu Glauco"],
+        "interior": ["Black Alcantara", "Arancio Racing", "Full Custom Nero"],
+        "trim": ["EVO", "EVO RWD", "STO", "Sterrato"]
+      },
+      "specs": {
+        "horsepower": "610–640 hp",
+        "acceleration": "2.9s 0–100",
+        "topSpeed": "325 km/h",
+        "fuelEconomy": "19.6L/100km"
+      },
+      "features": ["LDVI System", "ALA 2.0", "Forged Composite Body", "Carbon Ceramic Brakes", "Telemetry System"],
+      "tags": ["Supercar", "V10", "Italian"],
+      "isNew": false,
+      "isSale": false
+    },
+    {
+      "id": "car-015",
+      "brand": "Kia",
+      "model": "EV6",
+      "year": 2024,
+      "type": "Electric",
+      "basePrice": 46000,
+      "emoji": "⚡",
+      "description": "The Kia EV6 combines award-winning design with ultra-fast 800V charging technology.",
+      "options": {
+        "engine": ["Standard Range RWD 168hp", "Long Range RWD 229hp", "Long Range AWD GT-Line", "GT AWD 577hp"],
+        "transmission": ["Single-Speed (Electric)"],
+        "color": ["Snow White Pearl", "Aurora Black Pearl", "Runway Red", "Jungle Green", "Moonscape", "Gravity Blue"],
+        "interior": ["Black Cloth", "Interstellar Grey Leather", "Silky Lime Leather"],
+        "trim": ["Light", "Wind", "GT-Line", "GT"]
+      },
+      "specs": {
+        "horsepower": "168–577 hp",
+        "acceleration": "3.5–8.5s 0–100",
+        "topSpeed": "185–260 km/h",
+        "range": "394–501 km"
+      },
+      "features": ["800V Ultra-Fast Charging", "V2L Technology", "Augmented Reality HUD", "Meridian Sound", "Remote Smart Parking"],
+      "tags": ["Electric", "EV", "Crossover"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-016",
+      "brand": "Range Rover",
+      "model": "Sport",
+      "year": 2024,
+      "type": "SUV",
+      "basePrice": 96000,
+      "emoji": "🚙",
+      "description": "The Range Rover Sport is the ultimate combination of performance, luxury, and off-road capability.",
+      "options": {
+        "engine": ["3.0L Inline-6 MHEV", "4.4L V8 Twin-Turbo", "3.0L P440e PHEV"],
+        "transmission": ["8-Speed ZF Automatic"],
+        "color": ["Fuji White", "Santorini Black", "Bluefire", "Ostuni Pearl White", "Charente Grey"],
+        "interior": ["Ebony Leather", "Ivory Leather", "Siena Tan Leather", "Espresso Leather"],
+        "trim": ["Dynamic SE", "Dynamic HSE", "Autobiography", "First Edition", "SV"]
+      },
+      "specs": {
+        "horsepower": "395–530 hp",
+        "acceleration": "4.3–5.3s 0–100",
+        "topSpeed": "250 km/h (limited)",
+        "fuelEconomy": "13.2L/100km"
+      },
+      "features": ["Terrain Response 2", "Pivi Pro System", "Meridian Reference Audio", "Wade Sensing", "Air Suspension"],
+      "tags": ["SUV", "Luxury", "Off-Road"],
+      "isNew": true,
+      "isSale": false
+    },
+    {
+      "id": "car-017",
+      "brand": "Mazda",
+      "model": "MX-5 Miata",
+      "year": 2024,
+      "type": "Convertible",
+      "basePrice": 34000,
+      "emoji": "🚗",
+      "description": "The Mazda MX-5 Miata is the world's best-selling roadster — pure, joyful driving in its purest form.",
+      "options": {
+        "engine": ["2.0L SKYACTIV-G 181hp"],
+        "transmission": ["6-Speed Manual", "6-Speed Automatic"],
+        "color": ["Soul Red Crystal", "Machine Grey", "Jet Black Mica", "Snowflake White", "Zircon Sand Metallic"],
+        "interior": ["Black Leather", "Auburn Leather", "Tan Leather"],
+        "trim": ["Sport", "GX", "GS", "GS-P", "RF GT"]
+      },
+      "specs": {
+        "horsepower": "181 hp",
+        "acceleration": "6.5s 0–100",
+        "topSpeed": "219 km/h",
+        "fuelEconomy": "8.2L/100km"
+      },
+      "features": ["Bose Sound System", "Heads-Up Display", "i-ACTIVSENSE", "Mazda Connect", "Soft Top/RF Hardtop"],
+      "tags": ["Convertible", "Roadster", "Sports"],
+      "isNew": false,
+      "isSale": true
+    },
+    {
+      "id": "car-018",
+      "brand": "Ford",
+      "model": "F-150",
+      "year": 2024,
+      "type": "Truck",
+      "basePrice": 36000,
+      "emoji": "🛻",
+      "description": "America's best-selling vehicle for 47 years straight — the Ford F-150 is built tough.",
+      "options": {
+        "engine": ["3.3L V6", "2.7L EcoBoost V6", "3.5L EcoBoost V6", "5.0L V8", "3.5L PowerBoost Hybrid", "Lightning Electric"],
+        "transmission": ["10-Speed Automatic", "6-Speed Automatic"],
+        "color":["Oxford White", "Agate Black", "Star White", "Atlas Blue", "Carbonized Grey", "Velocity Blue"],
+        "interior": ["Medium Dark Slate Vinyl", "Slate Cloth", "Black Leather"],
+        "trim": ["XL", "XLT", "Lariat", "King Ranch", "Platinum", "Limited", "Raptor", "Lightning"]
+      },
+      "specs": {
+        "horsepower": "290–700 hp",
+        "acceleration": "4.0–8.0s 0–100",
+        "topSpeed": "180 km/h",
+        "towingCapacity": "6,350 kg max"
+      },
+      "features": ["Pro Power Onboard", "SYNC 4A", "360° Camera", "Tailgate Steps", "Pro Trailer Backup Assist"],
+      "tags": ["Truck", "Towing", "Work"],
+      "isNew": false,
+      "isSale": false
+    },
+    {
+      "id": "car-019",
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2024,
+      "type": "Sedan",
+      "basePrice": 30000,
+      "emoji": "🚗",
+      "description": "The Toyota Camry is Canada's favourite family sedan, renowned for long-term reliability.",
+      "options": {
+        "engine": ["2.5L 4-Cylinder", "2.5L Hybrid", "3.5L V6"],
+        "transmission": ["8-Speed Automatic", "CVT (Hybrid)"],
+        "color": ["Midnight Black", "Wind Chill Pearl", "Supersonic Red", "Predawn Grey Mica", "Blueprint", "Ice Edge"],
+        "interior": ["Black Fabric", "Ash Fabric", "Black/Macadamia SofTex", "Black Leather"],
+        "trim": ["LE", "SE", "XSE", "XLE", "V6 XLE", "TRD V6"]
+      },
+      "specs": {
+        "horsepower": "203–301 hp",
+        "acceleration": "5.8–7.6s 0–100",
+        "topSpeed": "210 km/h",
+        "fuelEconomy": "6.6L/100km"
+      },
+      "features": ["Toyota Safety Sense 2.5+", "9\" Touchscreen", "JBL Audio", "Digital Rearview Mirror", "Wireless Charging"],
+      "tags": ["Sedan", "Family", "Reliable"],
+      "isNew": false,
+      "isSale": false
+    },
+    {
+      "id": "car-020",
+      "brand": "Rivian",
+      "model": "R1T",
+      "year": 2024,
+      "type": "Electric",
+      "basePrice": 74000,
+      "emoji": "⚡",
+      "description": "The Rivian R1T is the world's first electric adventure truck — powerful, capable, and tech-forward.",
+      "options": {
+        "engine": ["Standard Pack (350mi)", "Large Pack (400mi)", "Max Pack (410mi+)"],
+        "transmission": ["Single-Speed (Electric)"],
+        "color": ["Launch Green", "Forest Edge", "Canyon Red", "Glacier White", "El Cap Granite", "Compass Yellow"],
+        "interior": ["Forest", "Ocean", "Peak"],
+        "trim": ["Standard", "Adventure", "Launch Edition"]
+      },
+      "specs": {
+        "horsepower": "835 hp",
+        "acceleration": "3.0s 0–100",
+        "topSpeed": "185 km/h",
+        "range": "563–660 km"
+      },
+      "features": ["Gear Tunnel Storage", "Camp Kitchen", "Air Suspension", "360° Cameras", "Vehicle-to-Home (V2H)"],
+      "tags": ["Electric", "Truck", "Adventure"],
+      "isNew": true,
+      "isSale": false
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- electric.html - Electric Vehicles page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Electric cars and hybrids at AutoElite.">
+  <meta name="keywords" content="Electric Vehicles AutoElite car catalogue">
+  <meta name="author" content="AutoElite">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link id="theme-link" rel="stylesheet" href="css/theme1.css">
+  <title>Electric Vehicles - AutoElite</title>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">Auto<span>Elite</span></a>
+    <nav><ul id="main-nav">
+      <li><a href="index.html">Home</a></li><li><a href="catalogue.html">Catalogue</a></li>
+      <li><a href="quote.html">Get a Quote</a></li><li><a href="compare.html">Compare</a></li>
+      <li><a href="contact.html">Contact</a></li><li><a href="about.html">About</a></li>
+      <li><a href="wiki/index.html">Help</a></li>
+    </ul></nav>
+    <div class="theme-switcher">
+      <button class="theme-btn t1" data-theme="1"></button>
+      <button class="theme-btn t2" data-theme="2"></button>
+      <button class="theme-btn t3" data-theme="3"></button>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div style="background:var(--bg-card);border-bottom:1px solid var(--border);padding:30px 20px;">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Electric Vehicles</div>
+    <h1 style="font-family:var(--font-heading);color:var(--primary);font-size:2rem;">EV Showcase</h1>
+    <p style="color:var(--text-muted);">Electric cars and hybrids</p>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="filter-bar" style="margin-bottom:20px;">
+      <div class="filter-group">
+        <label>Search</label>
+        <input type="text" id="search-input" placeholder="Search vehicles...">
+      </div>
+    </div>
+    <p style="color:var(--text-muted);margin-bottom:20px;">Showing <span id="result-count">0</span> vehicles</p>
+    <div class="product-grid" id="filtered-grid">
+      <div style="grid-column:1/-1;text-align:center;padding:40px;"><div class="spinner"></div></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>AutoElite</h4><p style="color:var(--text-muted);font-size:0.9rem;">Premium car catalogue.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="catalogue.html">All Vehicles</a></li><li><a href="quote.html">Get a Quote</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 AutoElite. All rights reserved.</p></div>
+</footer>
+<div id="toast" class="toast"></div>
+<script src="js/main.js"></script>
+<script>
+async function loadFiltered() {
+  try {
+    const res = await fetch('json/cars.json');
+    const data = await res.json();
+    let cars = data.cars;
+    const pageType = 'electric';
+    if (pageType === 'new-arrivals') cars = cars.filter(c => c.isNew);
+    else if (pageType === 'luxury') cars = cars.filter(c => c.basePrice >= 45000);
+    else if (pageType === 'electric') cars = cars.filter(c => c.type === 'Electric');
+    else if (pageType === 'trucks') cars = cars.filter(c => c.type === 'Truck');
+    else if (pageType === 'sports') cars = cars.filter(c => ['Sports','Coupe'].includes(c.type));
+
+    document.getElementById('result-count').textContent = cars.length;
+    const grid = document.getElementById('filtered-grid');
+    if (cars.length === 0) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);">No vehicles found in this category.</div>';
+      return;
+    }
+    grid.innerHTML = cars.map(car => `
+      <div class="product-card">
+        <div class="card-img" style="font-size:5rem">${car.emoji}</div>
+        <div class="card-body">
+          <div class="card-brand">${car.brand} &middot; ${car.year}</div>
+          <div class="card-title">${car.model}</div>
+          <div class="card-price">From $${car.basePrice.toLocaleString()}</div>
+          <div class="card-tags">${car.tags.map(t=>'<span class="tag">'+t+'</span>').join('')}</div>
+          <div style="display:flex;gap:8px;">
+            <a href="product-${car.id}.html" class="btn btn-primary" style="flex:1;text-align:center;padding:8px;font-size:0.85rem;">View Details</a>
+            <a href="quote.html?car=${car.id}" class="btn btn-outline" style="padding:8px 12px;font-size:0.85rem;">Quote</a>
+          </div>
+        </div>
+      </div>`).join('');
+
+    // Search filtering
+    document.getElementById('search-input').addEventListener('input', function() {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('.product-card').forEach(card => {
+        const name = (card.querySelector('.card-title')?.textContent || '') + (card.querySelector('.card-brand')?.textContent || '');
+        card.style.display = name.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  } catch(e) { console.warn('Error loading cars:', e); }
+}
+loadFiltered();
+</script>
+</body>
+</html>

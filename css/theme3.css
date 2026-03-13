@@ -1,0 +1,19 @@
+/* Theme 3: Winter Red - variables only, styles.css has all rules */
+:root {
+  --primary: #e74c3c;
+  --primary-dark: #c0392b;
+  --secondary: #1a0d0d;
+  --accent: #3498db;
+  --bg: #120808;
+  --bg-card: #1e0e0e;
+  --bg-card2: #1a0c0c;
+  --text: #fdf0f0;
+  --text-muted: #c09090;
+  --border: #3a1515;
+  --shadow: rgba(231,76,60,0.2);
+  --nav-bg: rgba(18,8,8,0.97);
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Raleway', 'Segoe UI', sans-serif;
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}

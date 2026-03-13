@@ -1,0 +1,19 @@
+/* Theme 2: Spring Green - variables only, styles.css has all rules */
+:root {
+  --primary: #2ecc71;
+  --primary-dark: #27ae60;
+  --secondary: #0d1f16;
+  --accent: #f39c12;
+  --bg: #0a1a10;
+  --bg-card: #0d2018;
+  --bg-card2: #122518;
+  --text: #e8f5e9;
+  --text-muted: #7fbf8a;
+  --border: #1a4025;
+  --shadow: rgba(46,204,113,0.2);
+  --nav-bg: rgba(10,26,16,0.97);
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Raleway', 'Segoe UI', sans-serif;
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}

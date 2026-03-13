@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <rect width="200" height="60" fill="#0f0f1a" rx="8"/>
+  <text x="15" y="42" fill="#c9a84c" font-family="serif" font-size="28" font-weight="bold">Auto</text>
+  <text x="90" y="42" fill="#e94560" font-family="serif" font-size="28" font-weight="bold">Elite</text>
+</svg>

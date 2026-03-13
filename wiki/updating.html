@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- wiki/updating.html - Help Wiki: Updating Content -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AutoElite Help: Updating Content">
+  <meta name="keywords" content="AutoElite help, car catalogue guide, how to use AutoElite">
+  <meta name="author" content="AutoElite">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link id="theme-link" rel="stylesheet" href="../css/theme1.css">
+  <title>Updating Content - AutoElite Help</title>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <a href="../index.html" class="logo">Auto<span>Elite</span></a>
+    <nav><ul id="main-nav">
+      <li><a href="../index.html">Home</a></li><li><a href="../catalogue.html">Catalogue</a></li>
+      <li><a href="../quote.html">Get a Quote</a></li><li><a href="../contact.html">Contact</a></li>
+      <li><a href="index.html" class="active">Help Wiki</a></li>
+    </ul></nav>
+    <div class="theme-switcher">
+      <button class="theme-btn t1" data-theme="1"></button>
+      <button class="theme-btn t2" data-theme="2"></button>
+      <button class="theme-btn t3" data-theme="3"></button>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<section style="padding-top:40px;">
+  <div class="wiki-layout">
+    <aside class="wiki-sidebar">
+      <h3>📚 Help Topics</h3>
+      <ul>
+        <li><a href="index.html">🏠 Help Home</a></li>
+        <li><a href="browsing.html">🔍 Browsing & Filtering</a></li>
+        <li><a href="quote.html">🧮 Quote Calculator</a></li>
+        <li><a href="compare.html">⚖️ Comparing Vehicles</a></li>
+        <li><a href="updating.html" class="active">✏️ Updating Content</a></li>
+      </ul>
+      <hr style="border-color:var(--border);margin:15px 0;">
+      <ul>
+        <li><a href="../contact.html">📞 Contact Support</a></li>
+        <li><a href="../catalogue.html">🚗 Browse Cars</a></li>
+      </ul>
+    </aside>
+    <main class="wiki-content">
+      <h1>How to Update Site Content</h1>
+<h2>Updating Car Data (JSON)</h2>
+<p>All vehicle data is stored in json/cars.json. Open this file in any text editor to add, remove, or modify vehicle listings.</p>
+<h2>Adding a New Vehicle</h2>
+<p>Copy an existing vehicle block in cars.json, change the id to a unique value (e.g. car-021), and fill in the brand, model, year, specs, options, etc.</p>
+<h2>Adding Images</h2>
+<p>Place copyright-free image files in the images/ folder. Reference them in the product HTML using: <img src='images/your-image.jpg'></p>
+<h2>Adding Videos</h2>
+<p>Place video files (MP4 preferred) in the video/ folder. Add them to pages using the HTML5 video tag.</p>
+<h2>Updating CSS Themes</h2>
+<p>Edit css/theme1.css (gold), css/theme2.css (green), or css/theme3.css (red) to change colors. Only the :root CSS variables need to be changed for a full theme recolor.</p>
+<h2>Adding HTML Pages</h2>
+<p>Copy an existing page like catalogue.html as a template. Update the page title, meta description, breadcrumb, and main content. Link it in the navigation.</p>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;">
+        <a href="../index.html" class="btn btn-outline" style="font-size:0.85rem;">← Back</a>
+        <a href="../contact.html" class="btn btn-primary" style="font-size:0.85rem;">Need More Help?</a>
+      </div>
+    </main>
+  </div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>AutoElite</h4><p style="color:var(--text-muted);font-size:0.9rem;">Premium car catalogue.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../catalogue.html">Catalogue</a></li></ul></div>
+    <div class="footer-col"><h4>Help</h4><ul><li><a href="index.html">Help Wiki</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 AutoElite. All rights reserved.</p></div>
+</footer>
+<div id="toast" class="toast"></div>
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+  media.html - AutoElite Media Gallery
+  Showcases video and audio content about vehicles
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AutoElite media gallery — watch introduction videos, EV showcase, and test drive guides.">
+  <meta name="keywords" content="AutoElite videos, car videos, EV showcase, test drive guide, car media">
+  <meta name="author" content="AutoElite">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link id="theme-link" rel="stylesheet" href="css/theme1.css">
+  <title>Media Gallery - AutoElite</title>
+  <style>
+    /* Video card styles */
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .video-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .video-thumb {
+      width: 100%;
+      height: 200px;
+      background: var(--bg-card2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .video-thumb::after {
+      content: '▶';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: rgba(201,168,76,0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #0f0f1a;
+      line-height: 60px;
+      text-align: center;
+      bottom: 15px;
+      right: 15px;
+    }
+    .video-info { padding: 18px; }
+    .video-title { font-family: var(--font-heading); color: var(--text); font-size: 1.1rem; margin-bottom: 6px; }
+    .video-desc { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 10px; }
+    .video-meta { color: var(--primary); font-size: 0.8rem; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.92); z-index: 9999;
+      align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      background: var(--bg-card);
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      width: 90%; max-width: 700px;
+      overflow: hidden;
+    }
+    .lightbox-header {
+      display: flex; justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .lightbox-close {
+      background: none; border: none; color: var(--text);
+      font-size: 1.5rem; cursor: pointer; padding: 0 5px;
+    }
+    .lightbox-frame { width: 100%; height: 400px; border: none; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">Auto<span>Elite</span></a>
+    <nav>
+      <ul id="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="wiki/index.html">Help</a></li>
+      </ul>
+    </nav>
+    <div class="theme-switcher">
+      <button class="theme-btn t1" data-theme="1"></button>
+      <button class="theme-btn t2" data-theme="2"></button>
+      <button class="theme-btn t3" data-theme="3"></button>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--bg-card);border-bottom:1px solid var(--border);padding:30px 20px;">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Media Gallery</div>
+    <h1 style="font-family:var(--font-heading);color:var(--primary);font-size:2rem;">Media Gallery</h1>
+    <p style="color:var(--text-muted);">Videos, animations, and audio content about our vehicles</p>
+  </div>
+</div>
+
+<!-- VIDEO SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Featured Videos</h2>
+    <p class="section-subtitle">Watch our curated collection of automotive content</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:25px;">
+
+      <div class="video-card">
+        <div class="video-thumb" onclick="openVideo('video/autoelite-intro.html','AutoElite Introduction')">🚗</div>
+        <div class="video-info">
+          <div class="video-title">AutoElite Introduction</div>
+          <div class="video-desc">A complete overview of the AutoElite catalogue, our mission, and what sets us apart in the premium automotive space.</div>
+          <div class="video-meta">▶ 2:30 &nbsp;|&nbsp; Brand Overview</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumb" onclick="openVideo('video/ev-showcase.html','Electric Vehicle Showcase')" style="background:linear-gradient(135deg,#0a1a10,#1a3a20);">⚡</div>
+        <div class="video-info">
+          <div class="video-title">Electric Vehicle Showcase</div>
+          <div class="video-desc">Explore the future of driving with our EV lineup — Tesla Model 3, Kia EV6, and Rivian R1T — all in one showcase.</div>
+          <div class="video-meta">▶ 3:15 &nbsp;|&nbsp; EV Showcase</div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-thumb" onclick="openVideo('video/test-drive-guide.html','Test Drive Guide')" style="background:linear-gradient(135deg,#0d1525,#162038);">🏎️</div>
+        <div class="video-info">
+          <div class="video-title">Test Drive Guide</div>
+          <div class="video-desc">Learn exactly what to check during a test drive — handling, braking, comfort, visibility, and technology features.</div>
+          <div class="video-meta">▶ 4:00 &nbsp;|&nbsp; Buying Guide</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AUDIO SECTION -->
+    <h2 class="section-title mt-40">Audio Content</h2>
+    <p class="section-subtitle">Listen to our automotive podcasts and sound guides</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+
+      <div class="about-card">
+        <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:10px;">🎙️ AutoElite Podcast Ep.1</h3>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:15px;">"The EV Revolution" — Our experts discuss the transition to electric vehicles and what it means for buyers today.</p>
+        <!-- HTML5 Audio element -->
+        <audio controls style="width:100%;" aria-label="AutoElite Podcast Episode 1">
+          <!-- In production: replace src with actual audio file -->
+          <source src="video/podcast-ep1.mp3" type="audio/mpeg">
+          <p style="color:var(--text-muted);font-size:0.8rem;">Your browser supports HTML5 audio. Add an MP3 file to enable playback.</p>
+        </audio>
+        <p style="color:var(--text-muted);font-size:0.75rem;margin-top:8px;">Episode 1 · 28 min · Hosted by James Wilson</p>
+      </div>
+
+      <div class="about-card">
+        <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:10px;">🎙️ AutoElite Podcast Ep.2</h3>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:15px;">"Luxury vs Performance" — Comparing the BMW 3 Series, Mercedes C-Class, and Audi A4 in depth.</p>
+        <audio controls style="width:100%;" aria-label="AutoElite Podcast Episode 2">
+          <source src="video/podcast-ep2.mp3" type="audio/mpeg">
+          <p style="color:var(--text-muted);font-size:0.8rem;">Add podcast-ep2.mp3 to the video/ folder to enable playback.</p>
+        </audio>
+        <p style="color:var(--text-muted);font-size:0.75rem;margin-top:8px;">Episode 2 · 35 min · Hosted by Marco Rossi</p>
+      </div>
+
+      <div class="about-card">
+        <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:10px;">🎶 Showroom Ambient</h3>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:15px;">Relax and browse with our curated showroom ambient music — a smooth jazz playlist for car enthusiasts.</p>
+        <audio controls style="width:100%;" aria-label="AutoElite Showroom Ambient Music">
+          <source src="video/showroom-ambient.mp3" type="audio/mpeg">
+          <p style="color:var(--text-muted);font-size:0.8rem;">Add showroom-ambient.mp3 to the video/ folder to enable playback.</p>
+        </audio>
+        <p style="color:var(--text-muted);font-size:0.75rem;margin-top:8px;">Ambient Music · Loop · Curated by AutoElite</p>
+      </div>
+
+    </div>
+
+    <!-- Instructions for updating -->
+    <div class="about-card mt-40">
+      <h3 style="color:var(--primary);font-family:var(--font-heading);margin-bottom:10px;">📁 How to Update Media Files</h3>
+      <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.9;">
+        To add real video or audio files, place your MP4/WebM (video) or MP3/OGG (audio) files into the <code style="background:var(--bg);padding:2px 6px;border-radius:4px;color:var(--primary);">video/</code> folder.
+        Then update the <code style="background:var(--bg);padding:2px 6px;border-radius:4px;color:var(--primary);">src</code> attribute in the corresponding
+        <code style="background:var(--bg);padding:2px 6px;border-radius:4px;color:var(--primary);">&lt;video&gt;</code> or
+        <code style="background:var(--bg);padding:2px 6px;border-radius:4px;color:var(--primary);">&lt;audio&gt;</code> tags on this page.
+        See <a href="wiki/updating.html" style="color:var(--primary);">the Help Wiki</a> for full instructions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>AutoElite</h4><p style="color:var(--text-muted);font-size:0.9rem;">Premium car catalogue.</p></div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul><li><a href="index.html">Home</a></li><li><a href="catalogue.html">Catalogue</a></li><li><a href="wiki/index.html">Help Wiki</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 AutoElite. All rights reserved.</p></div>
+</footer>
+
+<!-- VIDEO LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-header">
+      <span id="lightbox-title" style="color:var(--primary);font-family:var(--font-heading);">Video</span>
+      <button class="lightbox-close" onclick="closeVideo()">✕</button>
+    </div>
+    <iframe id="lightbox-frame" class="lightbox-frame" src="" title="AutoElite Video" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="js/main.js"></script>
+<script>
+  /* Open video in lightbox */
+  function openVideo(src, title) {
+    document.getElementById('lightbox-frame').src = src;
+    document.getElementById('lightbox-title').textContent = title;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  /* Close lightbox and stop video */
+  function closeVideo() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.getElementById('lightbox-frame').src = '';
+  }
+
+  /* Close on backdrop click */
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeVideo();
+  });
+</script>
+</body>
+</html>

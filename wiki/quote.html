@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- wiki/quote.html - Help Wiki: Quote Calculator -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AutoElite Help: Quote Calculator">
+  <meta name="keywords" content="AutoElite help, car catalogue guide, how to use AutoElite">
+  <meta name="author" content="AutoElite">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link id="theme-link" rel="stylesheet" href="../css/theme1.css">
+  <title>Quote Calculator - AutoElite Help</title>
+</head>
+<body>
+<header>
+  <div class="nav-container">
+    <a href="../index.html" class="logo">Auto<span>Elite</span></a>
+    <nav><ul id="main-nav">
+      <li><a href="../index.html">Home</a></li><li><a href="../catalogue.html">Catalogue</a></li>
+      <li><a href="../quote.html">Get a Quote</a></li><li><a href="../contact.html">Contact</a></li>
+      <li><a href="index.html" class="active">Help Wiki</a></li>
+    </ul></nav>
+    <div class="theme-switcher">
+      <button class="theme-btn t1" data-theme="1"></button>
+      <button class="theme-btn t2" data-theme="2"></button>
+      <button class="theme-btn t3" data-theme="3"></button>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<section style="padding-top:40px;">
+  <div class="wiki-layout">
+    <aside class="wiki-sidebar">
+      <h3>📚 Help Topics</h3>
+      <ul>
+        <li><a href="index.html">🏠 Help Home</a></li>
+        <li><a href="browsing.html">🔍 Browsing & Filtering</a></li>
+        <li><a href="quote.html" class="active">🧮 Quote Calculator</a></li>
+        <li><a href="compare.html">⚖️ Comparing Vehicles</a></li>
+        <li><a href="updating.html">✏️ Updating Content</a></li>
+      </ul>
+      <hr style="border-color:var(--border);margin:15px 0;">
+      <ul>
+        <li><a href="../contact.html">📞 Contact Support</a></li>
+        <li><a href="../catalogue.html">🚗 Browse Cars</a></li>
+      </ul>
+    </aside>
+    <main class="wiki-content">
+      <h1>How to Use the Quote Calculator</h1>
+<h2>Select Your Vehicle</h2>
+<p>Choose from the dropdown list of all 20 vehicles. The base price updates automatically.</p>
+<h2>Engine Options</h2>
+<p>Select an engine upgrade. Turbo (+$3,500), Hybrid (+$6,000), Electric (+$12,000), or V8 (+$8,000).</p>
+<h2>Paint Finish</h2>
+<p>Standard paint is included. Metallic, Pearl, and Matte finishes carry a premium cost.</p>
+<h2>Warranty Package</h2>
+<p>Choose from Basic (included), Extended 3yr, Extended 5yr, or Lifetime warranty.</p>
+<h2>Financing Options</h2>
+<p>Select your financing term from 24 to 72 months at 4.9% APR, or pay in full.</p>
+<h2>Trade-In Value</h2>
+<p>Enter your current vehicle's trade-in value to have it deducted from your total.</p>
+<h2>Reading Your Quote</h2>
+<p>The quote summary shows a full price breakdown including tax (13%) and monthly payment if financed.</p>
+      <div style="margin-top:30px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;">
+        <a href="../wiki/compare.html" class="btn btn-outline" style="font-size:0.85rem;">← Back</a>
+        <a href="../contact.html" class="btn btn-primary" style="font-size:0.85rem;">Need More Help?</a>
+      </div>
+    </main>
+  </div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>AutoElite</h4><p style="color:var(--text-muted);font-size:0.9rem;">Premium car catalogue.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../catalogue.html">Catalogue</a></li></ul></div>
+    <div class="footer-col"><h4>Help</h4><ul><li><a href="index.html">Help Wiki</a></li><li><a href="../contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 AutoElite. All rights reserved.</p></div>
+</footer>
+<div id="toast" class="toast"></div>
+<script src="../js/main.js"></script>
+
+</body>
+</html>
